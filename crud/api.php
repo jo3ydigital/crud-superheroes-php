@@ -15,7 +15,7 @@ class api {
 
 	# Constructor - open DB connection
 	public function __construct() {
-		$conf = json_decode(file_get_contents('configuration.json'), TRUE);
+		$conf = json_decode(file_get_contents('../configuration.json'), TRUE);
 		$this->db = new mysqli($conf["host"], $conf["user"], $conf["password"], $conf["database"]);
 	}
 
